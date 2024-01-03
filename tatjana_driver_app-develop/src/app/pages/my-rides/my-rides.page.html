@@ -1,0 +1,76 @@
+<ion-content fullscreen="true" class="container">
+    <ion-row class="login_top">
+        <ion-col size="12" class="d-flex ion-wrap ion-justify-content-start headTop">
+            <ion-button [routerLink]="['/home-ride']" fill="clear" class="ion-no-padding m-0">
+                <ion-icon src="/assets/icon/back.svg" class="arrowdown m-0" size="" slot="start"></ion-icon>
+            </ion-button>
+            <h1 class="font24 fontw700 w-100 ion-text-black ion-text-start mb-0 mt-0">My Rides</h1>
+        </ion-col>
+    </ion-row>
+    <ion-grid *ngIf="rideList.length" class="ride_center position-relative">
+        <ng-container *ngFor="let obj of rideList">
+            <ion-row class="mb-30">
+                <ion-col size="12" class="ion-no-padding">
+                    <h2 class="font16 fontw700 ion-text-black lh20 m-0">{{obj.date}}</h2>
+                </ion-col>
+            </ion-row>
+            <ion-row *ngFor="let ride of obj.rides"  class="mb-50">
+                <ion-col size="6" class="px-0 d-flex ion-align-items-center py-0">
+                    <ion-img class="pin" src="/assets/icon/pin-red.svg"></ion-img>
+                    <span class="font14 fontw400 ion-text-black lh17 ml-14">{{ride.origin_addresses}}</span>
+                </ion-col>
+                <ion-col size="6" class="px-0 d-flex ion-align-items-center ion-justify-content-end py-0">
+                    <ion-img class="star" src="/assets/icon/star-yellow.svg"></ion-img>
+                    <span class="font14 fontw500 text-grey-34 lh17 ml-6">{{ride.rating}}</span>
+                </ion-col>
+                <ion-col size="12" class="bottom px-0 d-flex ion-align-items-center mt-20 pt-20 pb-0">
+                    <ion-img class="pin-yellow" src="/assets/icon/pin-yellow.svg"></ion-img>
+                    <span class="font14 fontw400 ion-text-black lh17 ml-10 ">{{ride.destination_addresses}}</span>
+                </ion-col>
+            </ion-row>
+
+        </ng-container>
+        
+        <!-- <ion-row class="mb-50">
+            <ion-col size="6" class="px-0 d-flex ion-align-items-center py-0">
+                <ion-img class="pin" src="/assets/icon/pin-red.svg"></ion-img>
+                <span class="font14 fontw400 ion-text-black lh17 ml-14">Helden st</span>
+            </ion-col>
+            <ion-col size="6" class="px-0 d-flex ion-align-items-center ion-justify-content-end py-0">
+                <ion-img class="star" src="/assets/icon/star-yellow.svg"></ion-img>
+                <span class="font14 fontw500 text-grey-34 lh17 ml-6">4.4</span>
+            </ion-col>
+            <ion-col size="12" class="bottom px-0 d-flex ion-align-items-center mt-20 pt-20 pb-0">
+                <ion-img class="pin-yellow" src="/assets/icon/pin-yellow.svg"></ion-img>
+                <span class="font14 fontw400 ion-text-black lh17 ml-10">Charlotte St</span>
+            </ion-col>
+        </ion-row>
+        <ion-row class="mb-30">
+            <ion-col size="12" class="ion-no-padding">
+                <h2 class="font16 fontw700 ion-text-black lh20 m-0">Sep 10, 2022</h2>
+            </ion-col>
+        </ion-row>
+        <ion-row class="mb-50">
+            <ion-col size="6" class="px-0 d-flex ion-align-items-center py-0">
+                <ion-img class="pin" src="/assets/icon/pin-red.svg"></ion-img>
+                <span class="font14 fontw400 ion-text-black lh17 ml-14">Helden st</span>
+            </ion-col>
+            <ion-col size="6" class="px-0 d-flex ion-align-items-center ion-justify-content-end py-0">
+                <ion-img class="star" src="/assets/icon/star-yellow.svg"></ion-img>
+                <span class="font14 fontw500 text-grey-34 lh17 ml-6">4.4</span>
+            </ion-col>
+            <ion-col size="12" class="bottom px-0 d-flex ion-align-items-center mt-20 pt-20 pb-0">
+                <ion-img class="pin-yellow" src="/assets/icon/pin-yellow.svg"></ion-img>
+                <span class="font14 fontw400 ion-text-black lh17 ml-10 ">Charlotte St</span>
+            </ion-col>
+        </ion-row> -->
+    </ion-grid>
+    <ion-grid class="ride_center position-relative" *ngIf="rideList.length == 0">
+        <ion-row>
+            <ion-col siz="12">
+                <p>Empty List, No ride yet.</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    
+</ion-content>

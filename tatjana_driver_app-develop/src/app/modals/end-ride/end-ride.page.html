@@ -1,0 +1,19 @@
+<ion-grid fixed class="ion-no-padding">
+    <ion-row>
+        <ion-col size="12" class="ion-text-center ion-no-padding px-30">
+            <h1 class="font24 fontw700 lh23 mt-40 mb-30">Your Ride!</h1>
+
+            <div class="priceBox">
+                <h3 class="fontw700 m-0"><span class="fontw300">$</span>{{data.price}}</h3>
+                <p class="fontw300 font15 lh17">{{data.date}}</p>
+            </div>
+
+        </ion-col>
+        <ion-col size="12" class="ion-text-center  ion-no-padding mt-40 mb-40">
+            <ion-button (click)="closeModel()" color="light" fill="clear" class="btn-primary ion-no-margin ion-no-padding text-white fontw700 font17 ion-text-center">
+                <span>DONE</span>
+            </ion-button>
+        </ion-col>
+
+    </ion-row>
+</ion-grid>

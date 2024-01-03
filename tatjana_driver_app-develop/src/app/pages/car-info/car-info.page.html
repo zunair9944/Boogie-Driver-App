@@ -1,0 +1,341 @@
+<ion-content fullscreen="true" class="container">
+  <ion-row class="login_top">
+    <ion-col
+      size="12"
+      class="d-flex ion-wrap ion-justify-content-start headTop"
+    >
+      <ion-button
+        [routerLink]="['/personal-info']"
+        fill="clear"
+        class="ion-no-padding m-0"
+      >
+        <ion-icon
+          src="/assets/icon/back.svg"
+          class="arrowback m-0"
+          size=""
+          slot="start"
+        ></ion-icon>
+      </ion-button>
+      <h1 class="font24 fontw700 w-100 ion-text-black ion-text-start mb-0 mt-0">
+        Car Information
+      </h1>
+    </ion-col>
+  </ion-row>
+  <ion-grid class="login_center position-relative">
+    <form [formGroup]="ngForm" class="signup-form">
+      <ion-row>
+        <ion-col size="12" class="px-0 w-100">
+          <ion-item class="ion-no-padding pb-30 selectItem" [disabled]="!addMode">
+            <ion-select
+              [disabled]="!addMode"
+              class="customSelect w-100"
+              interface="popover"
+              placeholder="Select Car Category"
+              name="category"
+              formControlName="car_category_id"
+              [ngClass]='{"shake-effect-apply": shakeEffect, "has-error": f["car_category_id"].dirty && f["car_category_id"].touched && f["car_category_id"].errors}'
+              color="dark"
+              required="true"
+              type="text"
+              value="{{this.ngForm.value.car_category_id}}"
+              mode="ios"
+            >
+              <ion-select-option *ngFor="let category of categoryList" value="{{category.id}}">{{category.name}}</ion-select-option>
+            </ion-select>
+            <ion-icon
+              src="/assets/icon/arrow-down.svg"
+              class="w-16 m-0"
+              size=""
+              slot="end"
+            ></ion-icon>
+          </ion-item>
+          <div
+            class="mt--15"
+            *ngIf="f['car_category_id'].invalid && (f['car_category_id'].dirty || f['car_category_id'].touched)"
+          >
+            <p
+              *ngIf="f['car_category_id'].errors && f['car_category_id'].errors['required']"
+              class="text-red-light font12 fontwbold"
+            >
+              Car Category is required.
+            </p>
+          </div>
+          <ion-item class="customInput" [disabled]="!addMode">
+            <ion-label position="floating" class="font18 mt-0 redDot"
+              >Vehicle Make</ion-label
+            >
+            <ion-input
+            [disabled]="!addMode"
+              name="make"
+              formControlName="make"
+              [ngClass]='{"shake-effect-apply": shakeEffect, "has-error": f["make"].dirty && f["make"].touched && f["make"].errors}'
+              color="dark"
+              required="true"
+              type="text"
+              placeholder="Enter Vehicle Make"
+            ></ion-input>
+          </ion-item>
+          <div
+            *ngIf="f['make'].invalid && (f['make'].dirty || f['make'].touched)"
+          >
+            <p
+              *ngIf="f['make'].errors && f['make'].errors['required']"
+              class="text-red-light font12 fontwbold"
+            >
+              Vehicle Make is required.
+            </p>
+          </div>
+          <ion-item class="customInput" [disabled]="!addMode">
+            <ion-label position="floating" class="font18 mt-0 redDot"
+              >Vehicle Model</ion-label
+            >
+            <ion-input
+            [disabled]="!addMode"
+              name="model"
+              formControlName="model"
+              [ngClass]='{"shake-effect-apply": shakeEffect, "has-error": f["model"].dirty && f["model"].touched && f["model"].errors}'
+              color="dark"
+              required="true"
+              type="text"
+              placeholder="Enter Vehicle Model"
+            ></ion-input>
+          </ion-item>
+          <div
+            *ngIf="f['model'].invalid && (f['model'].dirty || f['model'].touched)"
+          >
+            <p
+              *ngIf="f['model'].errors && f['model'].errors['required']"
+              class="text-red-light font12 fontwbold"
+            >
+              Vehicle Model is required.
+            </p>
+          </div>
+          <ion-item class="customInput" [disabled]="!addMode">
+            <ion-label position="floating" class="font18 mt-0 redDot"
+              >Vehicle Plate Number</ion-label
+            >
+            <ion-input
+            [disabled]="!addMode"
+              name="plateNumber"
+              [disabled]="true"
+              formControlName="plateNumber"
+              [ngClass]='{"shake-effect-apply": shakeEffect, "has-error": f["plateNumber"].dirty && f["plateNumber"].touched && f["plateNumber"].errors}'
+              color="dark"
+              required="true"
+              type="text"
+              placeholder="Enter Vehicle Plate Number"
+            ></ion-input>
+          </ion-item>
+          <div
+            *ngIf="f['plateNumber'].invalid && (f['plateNumber'].dirty || f['plateNumber'].touched)"
+          >
+            <p
+              *ngIf="f['plateNumber'].errors && f['plateNumber'].errors['required']"
+              class="text-red-light font12 fontwbold"
+            >
+              Vehicle Plate Number is required.
+            </p>
+          </div>
+          <ion-label position="top" class="font12 mt-0 text-grey-666666 pt-30">Payment Method</ion-label>
+          <ion-item class="ion-no-padding selectItem">
+              <ion-select [disabled]="true" mode="ios" [value]="this.ngForm.value.card_number" formControlName="card_number" class="customSelect pl30 w-100" interface="popover" placeholder="Select">
+                  <ion-select-option *ngFor="let cardInfo of cardArr; let i = index" [value]="cardInfo.id">{{cardInfo.card_number}}</ion-select-option>
+              </ion-select>
+              <ion-icon src="/assets/icon/visa.svg" class="arrowdown m-0" size="" slot="start"></ion-icon>
+              <ion-icon src="/assets/icon/arrow-down.svg" class="arrowdown m-0" size="" slot="end"></ion-icon>
+          </ion-item>
+          <div class="mb-10" *ngIf="f['card_number'].invalid && (f['card_number'].dirty || f['card_number'].touched)">
+              <p *ngIf="f['card_number'].errors && f['card_number'].errors['required']" class="text-red-light font12 fontwbold">This field is required.</p>
+          </div>
+          <p (click)="goToAddCard()" class="text-grey-666666 font-16 fontw400 mt-20">+ Add Card</p>
+          <ion-row class="mt-30">
+            <ion-col size="6" class="ion-no-padding pr-8px">
+              <p class="text-grey-94 font11 fontw500 lh14">
+                Vehicle Registration <span class="text-red">*</span>
+              </p>
+              <div
+                [ngClass]="{'image-has-error':!isValidRegistrationImage1()}"
+                class="
+                  imageBox
+                  mt-10
+                  d-flex
+                  ion-justify-content-center ion-align-items-center
+                "
+                (click)="uploadRegistrationImage1()"
+              >
+                <ion-img
+                  [ngClass]='{"place": registrationImage1.webviewPath == "/assets/icon/img-placeholder.svg"}'
+                  [src]="registrationImage1.webviewPath"
+                ></ion-img>
+              </div>
+
+              <div
+                *ngIf="!isValidRegistrationImage1()"
+                class="mt-10 text-red-light font12"
+              >
+                Upload Registration image
+              </div>
+            </ion-col>
+            <ion-col size="6" class="ion-no-padding pl-8">
+              <p class="text-grey-94 font11 fontw500 lh14">
+                Vehicle Inspection <span class="text-red">*</span>
+              </p>
+              <div
+                [ngClass]="{'image-has-error':!isValidRegistrationImage2()}"
+                class="
+                  imageBox
+                  mt-10
+                  d-flex
+                  ion-justify-content-center ion-align-items-center
+                "
+                (click)="uploadRegistrationImage2()"
+              >
+                <ion-img
+                  [ngClass]='{"place": registrationImage2.webviewPath == "/assets/icon/img-placeholder.svg"}'
+                  [src]="registrationImage2.webviewPath"
+                ></ion-img>
+              </div>
+              <div
+                *ngIf="!isValidRegistrationImage2()"
+                class="mt-10 text-red-light font12"
+              >
+                Upload Vehicle Inspection image
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="mt-10">
+            <ion-col size="6" class="ion-no-padding pr-8px">
+              <p class="text-grey-94 font11 fontw500 lh14">
+                Vehicle Insurance <span class="text-red">*</span>
+              </p>
+              <div
+                [ngClass]="{'image-has-error':!isValidInsuranceImage()}"
+                class="
+                  imageBox
+                  mt-10
+                  d-flex
+                  ion-justify-content-center ion-align-items-center
+                "
+                (click)="uploadInsuranceImage()"
+              >
+                <ion-img
+                  [ngClass]='{"place": insuranceImage.webviewPath == "/assets/icon/img-placeholder.svg"}'
+                  [src]="insuranceImage.webviewPath"
+                ></ion-img>
+              </div>
+
+              <div
+                *ngIf="!isValidInsuranceImage()"
+                class="mt-10 text-red-light font12"
+              >
+                Upload Vehicle Insurance Image
+              </div>
+            </ion-col>
+            <ion-col size="6" class="ion-no-padding pl-8">
+              <p class="text-grey-94 font11 fontw500 lh14">
+                NV Business License <span class="text-red">*</span>
+              </p>
+              <div
+                [ngClass]="{'image-has-error':!isValidNvBusinessImage()}"
+                class="
+                  imageBox
+                  mt-10
+                  d-flex
+                  ion-justify-content-center ion-align-items-center
+                "
+                (click)="uploadNvBusinessImage()"
+              >
+                <ion-img
+                  [ngClass]='{"place": nvBusinessImage.webviewPath == "/assets/icon/img-placeholder.svg"}'
+                  [src]="nvBusinessImage.webviewPath"
+                ></ion-img>
+              </div>
+              <div
+                *ngIf="!isValidNvBusinessImage()"
+                class="mt-10 text-red-light font12"
+              >
+                Upload NV  Business License
+              </div>
+            </ion-col>
+          </ion-row>
+          <!-- <ion-row class="mt-30">
+            <p class="text-grey-94 font12 fontw500 lh14">
+              NV Business License <span class="text-red">*</span>
+            </p>
+            <div
+              [ngClass]="{'image-has-error':!isValidInsuranceImage()}"
+              class="
+                imageBox
+                mt-30
+                d-flex
+                ion-justify-content-center ion-align-items-center
+              "
+              (click)="uploadInsuranceImage()"
+            >
+              <ion-img
+                [ngClass]='{"place": insuranceImage.webviewPath == "/assets/icon/img-placeholder.svg"}'
+                [src]="insuranceImage.webviewPath"
+              ></ion-img>
+            </div>
+            <div
+              *ngIf="!isValidInsuranceImage()"
+              class="mt-10 text-red-light font12"
+            >
+              Upload NV Business
+              License image
+            </div>
+          </ion-row> -->
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>
+
+<ion-footer class="ion-no-border ion-color-white">
+  <ion-grid class="">
+    <ion-row>
+      <ion-col
+        size="12"
+        class="d-flex ion-wrap ion-justify-content-center pt-0 pb-0 px-30 mb-0"
+      >
+        <div
+          class="
+            d-flex
+            flex-column
+            w-100
+            ion-align-items-center ion-justify-content-center
+          "
+        >
+          <ion-button
+            [disabled]="submitAttempted"
+            (click)="handleNextClick()"
+            color="light"
+            fill="clear"
+            class="
+              btn-primary
+              ion-no-margin ion-no-padding
+              text-white
+              fontw700
+              font17
+              ion-text-center
+            "
+          >
+            <span
+              >NEXT
+              <ion-spinner
+                *ngIf="showLoadingSpin"
+                style="
+                  width: 20px;
+                  height: 20px;
+                  color: white;
+                  margin: auto auto auto 10px;
+                "
+                name="circular"
+              ></ion-spinner>
+            </span>
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

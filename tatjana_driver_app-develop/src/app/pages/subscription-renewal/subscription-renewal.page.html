@@ -1,0 +1,70 @@
+<ion-content fullscreen="true" class="container">
+    <ion-row class="login_top">
+        <ion-col size="12" class="d-flex ion-wrap ion-justify-content-start headTop">
+            <ion-button [routerLink]="['/home-ride']" fill="clear" class="ion-no-padding m-0">
+                <ion-icon src="/assets/icon/back.svg" class="arrowdown m-0" size="" slot="start"></ion-icon>
+            </ion-button>
+        </ion-col>
+    </ion-row>
+    <ion-grid class="login_center position-relative">
+        <ion-row>
+            <ion-col size="12" class="px-0 w-100">
+                <p *ngIf="subscription.price>0" (click)="handleRenewClick()" class="font13 fontw500 text-blue-43 mb-10 ion-text-center">{{subscription.name}} fee of ${{subscription.price}}</p>
+                <h1 class="font24 fontw700 w-100 text-black ion-text-center mb-30 mt-0">Subscription Renewal</h1>
+                <div class="priceBox ion-text-center">
+                    <p class="fontw300 font15 lh17">Your Outstanding Balance</p>
+                    <h3 *ngIf="!showBalLoading" class="fontw700 m-0"><span class="fontw300"></span>{{balance}}</h3>
+                    <ion-spinner *ngIf="showBalLoading" style="width: 40px; height: 40px; color: black;" name="circular"></ion-spinner>
+                </div>
+                <p class="font12 fontw300 text-red-EF mb-30 mt-15 ion-text-start">Any unused tokens at the end of the month are non-refundable and don't carry forward to the next month. </p>
+                <ul class="ion-text-start px-0 featureList mb-30 pb-20">
+                    <li class="d-flex ion-justify-content-start ion-align-items-center mb-30">
+                        <ion-img src="/assets/icon/check-pink.svg" class="w-16 " size="" slot="center"></ion-img>
+                        <span class="font12 fontw400 text-black ml-15">1 Token = any rides under 10 miles</span>
+                    </li>
+                    <li class="d-flex ion-justify-content-start ion-align-items-center mb-30">
+                        <ion-img src="/assets/icon/check-pink.svg" class="w-16 " size="" slot="center"></ion-img>
+                        <span class="font12 fontw400 text-black ml-15">2 Tokens = any rides between 10-50 miles</span>
+                    </li>
+                    <li class="d-flex ion-justify-content-start ion-align-items-center">
+                        <ion-img src="/assets/icon/check-pink.svg" class="w-16 " size="" slot="center"></ion-img>
+                        <span class="font12 fontw400 text-black ml-15">5 Tokens = any rides over 50 miles</span>
+                    </li>
+                </ul>
+                <p class="font16 fontw700 text-black mb-0 ">Add Tokens</p>
+            </ion-col>
+            <form [formGroup]="ngForm" class="w-100">
+                <ion-col size="12" class="px-0 py-0 mb-20 d-flex ion-align-items-center  ion-justify-content-start">
+                    <div class="emailBox d-flex ion-align-items-start flex-column ion-justify-content-center  mt-20 mx-40 position-relative">
+                        <span class="font12 fontw400 text-grey-94 mb-5">Tokens</span>
+                        <!-- <ion-input (keyup)="calPrice()" formControlName="token" type="number" value="100" class="inputTwo"></ion-input> -->
+                        <ion-select formControlName="token" (ionChange)="calPrice()" class="customSelect w-100" interface="popover" value="100" mod="ios" placeholder="Buy 100 Tokens For">
+                            <ion-select-option *ngFor="let item of tokenArr; let i = index" [value]="item.token">{{'Buy ' + item.token + ' Tokens For $' + item.price}}</ion-select-option>
+                        </ion-select>
+                        <ion-icon (click)="addToken()" src="/assets/icon/plus-blue-light.svg" class="w-17 position-absolute plusicon" size="" slot="end"></ion-icon>
+                    </div>
+                    <!-- <div class="rightInput d-flex ion-align-items-start flex-column ion-justify-content-center  mt-20 mx-40 ml-10">
+                        <span class="font12 fontw400 text-grey-94 mb-5">For ($)</span>
+                        <ion-input formControlName="price" [disabled]="true" type="tel" value="$150" class="inputTwo"></ion-input>
+                    </div> -->
+                </ion-col>
+                <ion-col size="12" class="px-0 py-0">
+                    <div class="phone d-flex ion-justify-content-start ion-align-items-center mt-0 mx-40" *ngIf="tokenArr">
+                        <ion-img src="/assets/icon/gift.svg" class="phoneIcon" size="" slot="center"></ion-img>
+                        <span class="font12 fontw300 text-blue-43 ml-8">Add 100 tokens for ${{100*tokenPrice}} and 50 tokens for ${{50*tokenPrice}}</span>
+                    </div>
+                </ion-col>
+                <ion-col size="12" class="px-0 py-0  d-flex ion-align-items-center flex-column ion-justify-content-center">
+                    <ion-button [disabled]="submitAttempted" (click)="handleAddClick()" color="light " fill="clear " class="btn-primary mt-50 mx-auto d-block ion-no-margin ion-no-padding text-white fontw700 font17 ion-text-center mx-50">
+                        <span>Purchase &nbsp; &nbsp; <ion-spinner *ngIf="showLoadingSpin" style="width: 20px; height: 20px; color: white;" name="circular"></ion-spinner></span>
+                    </ion-button>
+                </ion-col>
+            </form>
+                <ion-col size="12" class="ion-text-center  ion-no-padding mb-0">
+                    <ion-button color="light" fill="clear" class="btn-link-grey text-underline text-grey-666666">
+                        <span class="font15 fontw400 lh18 text-grey-666666 text-capitalize text-underline">Cancel</span>
+                    </ion-button>
+                </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

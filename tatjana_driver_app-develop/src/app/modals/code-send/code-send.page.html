@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center mt-30">
+        <h1 class="font20 fontw500 lh24 text-black opacity75 mt-40">
+          We have sent 6 digit code
+        </h1>
+        <p class="font20 fontw500 lh20 text-black mt-0">to {{phone}}</p>
+      </ion-col>
+      <ion-col size="12" class="mt-40 pt-20 mb-50">
+        <ion-button
+          [routerLink]="['/verification-code']"
+          color="light "
+          fill="clear "
+          class="
+            btn-primary
+            w-100
+            ion-no-margin ion-no-padding
+            text-white
+            fontw700
+            font17
+            ion-text-center
+          "
+          (click)="cancel()"
+        >
+          <span>Continue </span>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

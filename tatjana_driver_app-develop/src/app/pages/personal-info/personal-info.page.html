@@ -1,0 +1,360 @@
+<ion-content fullscreen="true" class="container">
+  <ion-row class="login_top">
+    <ion-col
+      size="12"
+      class="d-flex ion-wrap ion-justify-content-start headTop"
+    >
+      <ion-button
+        (click)="goBack()"
+        fill="clear"
+        class="ion-no-padding m-0"
+      >
+        <ion-icon
+          src="/assets/icon/back.svg"
+          class="arrowback m-0"
+          size=""
+          slot="start"
+        ></ion-icon>
+      </ion-button>
+      <h1 class="font24 fontw700 w-100 ion-text-black ion-text-start mb-0 mt-0">
+        Personal Information
+      </h1>
+    </ion-col>
+  </ion-row>
+  <ion-grid class="login_center position-relative">
+    <form [formGroup]="ngForm" class="signup-form">
+      <ion-row>
+        <ion-col size="12" class="px-0 w-100">
+          <ion-item class="customInput" [disabled]="!addMode">
+            <ion-label position="floating" class="font18 mt-0 redDot"
+              >First Name</ion-label
+            >
+            <ion-input
+              name="first_name"
+              formControlName="first_name"
+              [ngClass]='{"shake-effect-apply": shakeEffect, "has-error": f["first_name"].dirty && f["first_name"].touched && f["first_name"].errors}'
+              required="true"
+              type="text"
+              placeholder="Enter First Name"
+            ></ion-input>
+          </ion-item>
+          <div
+            *ngIf="f['first_name'].invalid && (f['first_name'].dirty || f['first_name'].touched)"
+          >
+            <p
+              *ngIf="f['first_name'].errors && f['first_name'].errors['required']"
+              class="text-red-light font12 fontwbold"
+            >
+              First Name is required.
+            </p>
+          </div>
+
+          <ion-item class="customInput" [disabled]="!addMode">
+            <ion-label position="floating" class="font18 mt-0 redDot"
+              >Last Name</ion-label
+            >
+            <ion-input
+              name="last_name"
+              formControlName="last_name"
+              [ngClass]='{"shake-effect-apply": shakeEffect, "has-error": f["last_name"].dirty && f["last_name"].touched && f["last_name"].errors}'
+              required="true"
+              type="text"
+              placeholder="Enter Last Name"
+            ></ion-input>
+          </ion-item>
+          <div
+            *ngIf="f['last_name'].invalid && (f['last_name'].dirty || f['last_name'].touched)"
+          >
+            <p
+              *ngIf="f['last_name'].errors && f['last_name'].errors['required']"
+              class="text-red-light font12 fontwbold"
+            >
+              Last Name is required.
+            </p>
+          </div>
+
+          <ion-item class="customInput" [disabled]="!addMode">
+            <ion-label position="floating" class="font18 mt-0 redDot"
+              >Mobile Number</ion-label
+            >
+            <ion-input
+              name="mobile"
+              formControlName="mobile"
+              [ngClass]='{"shake-effect-apply": shakeEffect, "has-error": f["mobile"].dirty && f["mobile"].touched && f["mobile"].errors}'
+              required="true"
+              type="number"
+              placeholder="Enter Mobile Number"
+            ></ion-input>
+          </ion-item>
+          <div
+            *ngIf="f['mobile'].invalid && (f['mobile'].dirty || f['mobile'].touched)"
+          >
+            <p
+              *ngIf="f['mobile'].errors && f['mobile'].errors['required']"
+              class="text-red-light font12 fontwbold"
+            >
+              Mobile Number is required.
+            </p>
+          </div>
+
+          <ion-item class="customInput">
+            <ion-label position="floating" class="font18 mt-0">Email</ion-label>
+            <ion-input
+            [disabled]="!addMode"
+              type="email"
+              name="email"
+              formControlName="email"
+              autocomplete="new-email"
+              [ngClass]='{"shake-effect-apply": shakeEffect, "has-error": f["email"].dirty && f["email"].touched && f["email"].errors}'
+              required="true"
+              placeholder="Enter Email"
+            ></ion-input>
+          </ion-item>
+          <div
+            *ngIf="f['email'].invalid && (f['email'].dirty || f['email'].touched)"
+          >
+            <p
+              *ngIf="f['email'].errors && f['email'].errors['required']"
+              class="text-red-light font12 fontwbold"
+            >
+              Email is required.
+            </p>
+            <p
+              *ngIf="f['email'].errors && f['email'].errors['pattern']"
+              class="text-red-light font12 fontwbold"
+            >
+              Invalid email
+            </p>
+          </div>
+          
+          <ion-item class="customInput">
+            <ion-label position="floating" class="font18 mt-0 redDot"
+              >Address</ion-label
+            >
+            <ion-input
+              id="address"
+              formControlName="address"
+              type="text"
+              placeholder="Enter Address"
+            ></ion-input>
+          </ion-item>
+          <div
+            *ngIf="f['address'].invalid && (f['address'].dirty || f['address'].touched)"
+          >
+            <p
+              *ngIf="f['address'].errors && f['address'].errors['required']"
+              class="text-red-light font12 fontwbold"
+            >
+              Address is required.
+            </p>
+          </div>
+          <ion-item class="customInput">
+            <ion-label position="floating" class="font18 mt-0 redDot"
+              >City</ion-label
+            >
+            <ion-input
+              name="city"
+              formControlName="city"
+              [ngClass]='{"shake-effect-apply": shakeEffect, "has-error": f["city"].dirty && f["city"].touched && f["city"].errors}'
+              required="true"
+              type="text"
+              placeholder="Enter City Name"
+            ></ion-input>
+          </ion-item>
+          <div
+            *ngIf="f['city'].invalid && (f['city'].dirty || f['city'].touched)"
+          >
+            <p
+              *ngIf="f['city'].errors && f['city'].errors['required']"
+              class="text-red-light font12 fontwbold"
+            >
+              City is required.
+            </p>
+          </div>
+
+          <ion-item class="customInput">
+            <ion-label position="floating" class="font18 mt-0 redDot"
+              >State</ion-label
+            >
+            <ion-input
+              name="state"
+              formControlName="state"
+              [ngClass]='{"shake-effect-apply": shakeEffect, "has-error": f["state"].dirty && f["state"].touched && f["state"].errors}'
+              required="true"
+              type="text"
+              placeholder="Enter State Name"
+            ></ion-input>
+          </ion-item>
+          <div
+            *ngIf="f['state'].invalid && (f['state'].dirty || f['state'].touched)"
+          >
+            <p
+              *ngIf="f['state'].errors && f['state'].errors['required']"
+              class="text-red-light font12 fontwbold"
+            >
+              State is required.
+            </p>
+          </div>
+
+
+          <ion-item class="customInput">
+            <ion-label position="floating" class="font18 mt-0 redDot"
+              >Zip</ion-label
+            >
+            <ion-input
+              name="zip"
+              formControlName="zip"
+              [ngClass]='{"shake-effect-apply": shakeEffect, "has-error": f["zip"].dirty && f["zip"].touched && f["zip"].errors}'
+              required="true"
+              type="text"
+              placeholder="Enter Zip Code"
+            ></ion-input>
+          </ion-item>
+          <div
+            *ngIf="f['zip'].invalid && (f['zip'].dirty || f['zip'].touched)"
+          >
+            <p
+              *ngIf="f['zip'].errors && f['zip'].errors['required']"
+              class="text-red-light font12 fontwbold"
+            >
+              Zip is required.
+            </p>
+          </div>
+
+          
+
+          <ion-row>
+            <ion-col size="6" class="ion-no-padding pr-8px">
+              <p class="text-grey-94 font12 fontw500 lh14">Driver License Front *</p>
+              <div
+              
+                [ngClass]="{'image-has-error':!isValidLicenseImage1()}"
+                class="imageBox mt-10"
+                (click)="uploadDriverLicense()"
+              >
+                <ion-img
+                  [ngClass]='{"place": licenseImage1.webviewPath == "/assets/icon/img-placeholder.svg"}'
+                  [src]="licenseImage1.webviewPath"
+                ></ion-img>
+              </div>
+              <!-- <div
+              *ngIf="!addMode"
+                [ngClass]="{'image-has-error':!isValidLicenseImage1()}"
+                class="imageBox mt-10"
+              >
+              <ion-img
+                  [ngClass]='{"place": licenseImage1.webviewPath == "/assets/icon/img-placeholder.svg"}'
+                  [src]="licenseImage1.webviewPath"
+                ></ion-img>
+
+              </div> -->
+              <div
+                *ngIf="!isValidLicenseImage1()"
+                class="mt-10 text-red-light font12"
+              >
+                Upload license front image
+              </div>
+            </ion-col>
+            <ion-col size="6" class="ion-no-padding pl-8">
+              <p class="text-grey-94 font12 fontw500 lh14">Driver License Back *</p>
+              <div
+              
+                [ngClass]="{'image-has-error':!isValidLicenseImage2()}"
+                class="
+                  imageBox
+                  mt-10
+                  d-flex
+                  ion-justify-content-center ion-align-items-center
+                "
+                (click)="uploadDriverLicense2()"
+              >
+              
+                <ion-img
+                  [ngClass]='{"place": licenseImage2.webviewPath == "/assets/icon/img-placeholder.svg"}'
+                  [src]="licenseImage2.webviewPath"
+                ></ion-img>
+              </div>
+              <!-- <div
+              *ngIf="!addMode"
+                [ngClass]="{'image-has-error':!isValidLicenseImage2()}"
+                class="
+                  imageBox
+                  mt-10
+                  d-flex
+                  ion-justify-content-center ion-align-items-center
+                "
+                
+              >
+              <ion-img
+                  [ngClass]='{"place": licenseImage2.webviewPath == "/assets/icon/img-placeholder.svg"}'
+                  [src]="licenseImage2.webviewPath"
+                ></ion-img>
+              </div> -->
+              <div
+                *ngIf="!isValidLicenseImage2()"
+                class="mt-10 mt-5 text-red-light font12"
+              >
+                Upload license back image
+              </div>
+            </ion-col>
+          </ion-row>
+          <!-- <ion-label *ngIf="!addMode" class="mt-20" style="color: orangered !important; font-size: 10px;">Can't Update License Images.</ion-label> -->
+          <ion-row>
+            <ion-col size="12" class="ion-no-padding mt-10">
+              <p class="font12 mt-10 fontw400 text-grey-22 h19">
+                Maximum file size 2MB, Format JPG, JPEG, GIF, PNG
+              </p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>
+<ion-footer class="ion-no-border ion-color-white">
+  <ion-grid class="">
+    <ion-row>
+      <ion-col
+        size="12"
+        class="d-flex ion-wrap ion-justify-content-center pt-0 pb-0 px-30 mb-0"
+      >
+        <div
+          class="
+            d-flex
+            flex-column
+            w-100
+            ion-align-items-center ion-justify-content-center
+          "
+        >
+          <ion-button
+            (click)="handleNextClick()"
+            color="light"
+            fill="clear"
+            class="
+              btn-primary
+              ion-no-margin ion-no-padding
+              text-white
+              fontw700
+              font17
+              ion-text-center
+            "
+          >
+            <span
+              >NEXT
+              <ion-spinner
+                *ngIf="showLoadingSpin"
+                style="
+                  width: 20px;
+                  height: 20px;
+                  color: white;
+                  margin: auto auto auto 10px;
+                "
+                name="circular"
+              ></ion-spinner>
+            </span>
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

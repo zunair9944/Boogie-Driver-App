@@ -1,0 +1,124 @@
+<!-- <ion-modal
+  #modal
+  class="modalMain"
+  [showBackdrop]="false"
+  [initialBreakpoint]="0.7"
+  [breakpoints]="[0.7, 0.25]"
+  handleBehavior="cycle"
+  [backdropDismiss]="false"
+  [isOpen]="true"
+> -->
+<div class="modalMain">
+  <div class="modalContainerUp">
+    <div class="modalContainer px-0">
+      <div class="head d-flex mt-20 px-20 pb-25">
+        <div>
+          <ion-img class="user userCircleLg" src="{{ profile_image }}"></ion-img>
+        </div>
+        <div class="flex-fill w-100 ml-15">
+          <h4 class="font15 fontw600 text-black mt-0 mb-5">{{name}}</h4>
+          <p class="font15 fontw500 text-grey-666666 mb-10 mt-10">
+            {{dropoff_distance}} ({{time}})
+          </p>
+
+          <p class="font20 fontw700 text-black m-0">${{base_fare}}</p>
+        </div>
+        <div class="ion-text-center min126 d-flex ion-justify-content-end">
+          <ion-img class="w-44" src="/assets/icon/phone-2.svg"></ion-img>
+          <ion-img class="w-44 email" src="/assets/icon/email-2.svg"></ion-img>
+        </div>
+      </div>
+
+      <ion-row class="pt-30">
+        <ion-col size="12" class="ion-no-padding">
+          <ion-row class="m-0 px-20">
+            <ion-col
+              size="2"
+              class="ion-no-padding d-flex ion-align-items-center"
+            >
+              <ion-img class="w-41" src="/assets/icon/pick-up.svg"></ion-img>
+            </ion-col>
+            <ion-col size="10" class="ion-no-padding">
+              <h5 class="font11 fontw700 text-black mt-0 mb-5">
+                PICK UP
+                <span class="text-grey-666666 fontw400"
+                  >({{pickup_distance}} miles away from your location)</span
+                >
+              </h5>
+              <p class="font14 text-black fontw400 m-0">{{pickup_address}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="12 " class="ion-no-padding px-10">
+          <hr class="hr" />
+        </ion-col>
+
+        <ion-col size="12" class="ion-no-padding">
+          <ion-row class="m-0 px-20">
+            <ion-col
+              size="2"
+              class="ion-no-padding d-flex ion-align-items-center"
+            >
+              <ion-img class="w-41" src="/assets/icon/drop-off.svg"></ion-img>
+            </ion-col>
+            <ion-col size="10" class="ion-no-padding">
+              <h5 class="font11 fontw700 text-black mt-0 mb-5">DROP OFF</h5>
+              <p class="font14 fontw400 text-black m-0">
+                {{ dropoff_address }}
+              </p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="12 " class="ion-no-padding px-10">
+          <hr class="hr" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="m-0 px-30">
+        <ion-col
+          size="12"
+          class="ion-no-padding d-flex ion-justify-content-center"
+        >
+          <ion-button
+            (click)="acceptRide(false)"
+            color="light"
+            fill="clear"
+            class="
+              btn-primary
+              orange
+              w-100
+              ion-no-margin ion-no-padding
+              text-white
+              fontw700
+              font16
+              ion-text-center
+            "
+          >
+            <span>Decline &nbsp; &nbsp; <ion-spinner *ngIf="showDecSpin" name="circular" style="width: 20px; height: 20px; color: white;" ></ion-spinner></span>
+          </ion-button>
+          <ion-button
+            [disabled]="acceptSubimitted"
+            (click)="acceptRide(true)"
+            color="light"
+            fill="clear"
+            class="
+              ml-30
+              btn-primary
+              w-100
+              ion-no-margin ion-no-padding
+              text-white
+              fontw700
+              font16
+              ion-text-center
+            "
+          >
+            <span>Accept &nbsp; &nbsp; <ion-spinner *ngIf="showAcceptSpin" name="circular" style="width: 20px; height: 20px; color: white;" ></ion-spinner></span>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <!-- [routerLink]="['/pickup-ride']" 
+        [routerLink]="['/ride-expired']" -->
+    </div>
+  </div>
+</div>
+<!-- </ion-modal> -->

@@ -1,0 +1,133 @@
+<!-- <ion-modal
+  #modal
+  class="modalMain"
+  trigger="open-modal"
+  [showBackdrop]="false"
+  [initialBreakpoint]="0.7"
+  [breakpoints]="[0.7, 0.25]"
+  handleBehavior="cycle"
+  [backdropDismiss]="false"
+  [isOpen]="true"
+> -->
+<div class="modalMain">
+  <div class="modalContainerUp">
+    <div class="modalContainer px-0">
+      <div class="head d-flex mt-20 px-20 pb-25">
+        <div>
+          <ion-img
+            class="user userCircleLg"
+            src="{{ data.riderData.profile_image }}"
+          ></ion-img>
+        </div>
+        <div class="flex-fill w-100 ml-15">
+          <h4 class="font15 fontw600 text-black mt-0 mb-5">
+            {{ data.riderData.name }}
+          </h4>
+          <p class="font15 fontw500 text-grey-666666 mb-10 mt-10">
+            {{ data.pickup_distance }} away ({{ data.pickup_time }})
+          </p>
+
+          <p class="font20 fontw700 text-black m-0">{{ data.fare }}</p>
+        </div>
+        <div class="ion-text-center min126 d-flex ion-justify-content-end">
+          <ion-img
+            (click)="callRider('+923434188587')"
+            class="w-44"
+            src="/assets/icon/phone-2.svg"
+          ></ion-img>
+          <ion-img
+            (click)="handleOpenChatPage()"
+            class="w-44 email"
+            src="/assets/icon/email-2.svg"
+          ></ion-img>
+        </div>
+      </div>
+
+      <ion-row class="pt-30">
+        <ion-col size="12" class="ion-no-padding">
+          <ion-row class="m-0 px-20">
+            <ion-col
+              size="2"
+              class="ion-no-padding d-flex ion-align-items-center"
+            >
+              <ion-img class="w-41" src="/assets/icon/pick-up.svg"></ion-img>
+            </ion-col>
+            <ion-col size="10" class="ion-no-padding">
+              <h5 class="font11 fontw700 text-black mt-0 mb-5">
+                PICK UP
+                <span class="text-grey-666666 fontw400"
+                  >( {{ data.pickup_distance }} away from your location)</span
+                >
+              </h5>
+              <p class="font14 fontw400 m-0 text-black">
+                {{ data.pickup_address }}
+              </p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="12 " class="ion-no-padding px-10">
+          <hr class="hr" />
+        </ion-col>
+
+        <ion-col size="12" class="ion-no-padding">
+          <ion-row class="m-0 px-20">
+            <ion-col
+              size="2"
+              class="ion-no-padding d-flex ion-align-items-center"
+            >
+              <ion-img class="w-41" src="/assets/icon/drop-off.svg"></ion-img>
+            </ion-col>
+            <ion-col size="10" class="ion-no-padding">
+              <h5 class="font11 fontw700 text-black mt-0 mb-5">
+                DROP OFF
+                <span class="text-grey-666666 fontw400"
+                  >( {{ data.dropoff_distance }} away from your location)</span
+                >
+              </h5>
+              <p class="font14 fontw400 m-0 text-black">
+                {{ data.dropoff_address }}
+              </p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="12 " class="ion-no-padding px-10">
+          <hr class="hr" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="m-0 px-30">
+        <ion-col
+          size="12"
+          class="ion-no-padding d-flex ion-justify-content-center"
+        >
+          <ion-button
+            [disabled]="submitAttempted || disabledArrivedBtn"
+            color="light"
+            fill="clear"
+            class="
+              ml-30
+              btn-primary
+              w-100
+              ion-no-margin ion-no-padding
+              text-white
+              fontw700
+              font16
+              ion-text-center
+            "
+            (click)="handleDriverArrived()"
+          >
+            <span
+              >I'AVE ARRIVED &nbsp; &nbsp;
+              <ion-spinner
+                *ngIf="showLoadingSpin"
+                class="spin-global"
+                name="circular"
+              ></ion-spinner>
+            </span>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</div>
+<!-- </ion-modal> -->

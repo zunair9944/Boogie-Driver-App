@@ -1,0 +1,127 @@
+<ion-content #content fullscreen="true" class="container">
+  <ion-row class="login_top">
+    <ion-col
+      size="12"
+      class="d-flex ion-wrap ion-justify-content-start headTop"
+    >
+      <ion-button
+        [routerLink]="['/signup']"
+        fill="clear"
+        class="ion-no-padding m-0"
+      >
+        <ion-icon
+          src="/assets/icon/back.svg"
+          class="arrowback m-0"
+          size=""
+          slot="start"
+        ></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-grid class="login_center position-relative mt-40 pt-40">
+    <ion-row>
+      <ion-col size="12" class="px-0 w-100 ion-text-center">
+        <ion-img
+          class="lock-img mx-auto d-block"
+          src="/assets/icon/lock-img.svg"
+        ></ion-img>
+        <h1 class="font24 fontw700 lh24 text-black opacity75 mt-40">
+          Phone Number
+        </h1>
+        <p class="font16 fontw400 lh20 text-grey-666666 mt-5">
+          Boogie Rides will send you a text with a verification code.
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="">
+    <form [formGroup]="ngForm" class="phone-verify-form">
+      <ion-row>
+        <ion-col size="12" class="px-0 w-100 ion-text-center">
+          <div class="phoneInput">
+            <!-- <ion-input class="phoneOne" type="tel" placeholder=""></ion-input> -->
+            <!--  -->
+            <!-- <ion-input
+              name="cCode"
+              class="phoneOne"
+              [value]="cCodeDefault"
+              [disabled]="true"
+            ></ion-input> -->
+
+            <ion-select formControlName="countryCode" class="customSelect font12" interface="popover" placeholder="Country Code" [value]="cCodeDefault">
+              <ion-select-option value="+1" selected>USA (+1)</ion-select-option>
+              <ion-select-option value="+12">Canada (+1)</ion-select-option>
+              <ion-select-option value="+52">Mexico (+52)</ion-select-option>
+          </ion-select>
+
+            <!--  -->
+            <!-- <ion-input class="phoneTwo" type="tel" placeholder=""></ion-input> -->
+
+            <!--  -->
+            <ion-input
+              name="phoneNumber"
+              formControlName="phoneNumber"
+              class="phoneTwo"
+              [ngClass]="{'has-error': f['phoneNumber'].invalid && f['phoneNumber'].dirty && f['phoneNumber'].touched }"
+              required="true"
+              type="tel"
+              placeholder=""
+            ></ion-input>
+            <!-- 3124247282 -->
+            <!--  -->
+          </div>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>
+
+<ion-footer class="ion-no-border ion-color-white">
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col
+        size="12 "
+        class="d-flex ion-wrap ion-justify-content-center pt-0 pb-0 px-20 mb-0"
+      >
+        <div
+          class="
+            d-flex
+            flex-column
+            w-100
+            ion-align-items-center ion-justify-content-center
+          "
+        >
+          <ion-button
+            [disabled]="submitAttempted"
+            (click)="sendCode()"
+            color="light "
+            fill="clear "
+            class="
+              btn-primary
+              w-100
+              ion-no-margin ion-no-padding
+              text-white
+              fontw700
+              font17
+              ion-text-center
+            "
+          >
+            <span
+              >Continue
+              <ion-spinner
+                *ngIf="showLoadingSpin"
+                style="
+                  width: 20px;
+                  height: 20px;
+                  color: white;
+                  margin-left: 20px;
+                "
+                name="circular"
+              ></ion-spinner>
+            </span>
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

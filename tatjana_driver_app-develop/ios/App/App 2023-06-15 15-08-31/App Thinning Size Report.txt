@@ -1,0 +1,106 @@
+
+App Thinning Size Report for All Variants of App
+
+Variant: App-110F9828-0219-40EF-822D-480C167E2E42.ipa
+Supported variant descriptors: [device: iPhone11,8, os-version: 16.0], [device: iPhone12,1, os-version: 16.0], [device: iPhone12,1, os-version: 15.0], and [device: iPhone11,8, os-version: 15.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-28F16343-7348-4E0E-B1F5-7ED19018238E.ipa
+Supported variant descriptors: [device: iPhone8,4, os-version: 14.0], [device: iPhone8,1, os-version: 13.0], [device: iPhone8,4, os-version: 13.0], [device: iPod9,1, os-version: 14.0], [device: iPod9,1, os-version: 13.0], and [device: iPhone8,1, os-version: 14.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-2D09EC80-4AEA-4A4B-BF24-017258132C43.ipa
+Supported variant descriptors: [device: iPhone14,2, os-version: 15.0], [device: iPhone11,6, os-version: 16.0], [device: iPhone10,5, os-version: 15.0], [device: iPhone10,2, os-version: 15.0], [device: iPhone14,5, os-version: 15.0], [device: iPhone14,3, os-version: 16.0], [device: iPhone14,8, os-version: 16.0], [device: iPhone11,4, os-version: 15.0], [device: iPhone13,4, os-version: 15.0], [device: iPhone13,3, os-version: 16.0], [device: iPhone12,5, os-version: 15.0], [device: iPhone14,3, os-version: 15.0], [device: iPhone10,6, os-version: 15.0], [device: iPhone13,3, os-version: 15.0], [device: iPhone9,4, os-version: 15.0], [device: iPhone12,5, os-version: 16.0], [device: iPhone10,6, os-version: 16.0], [device: iPhone11,6, os-version: 15.0], [device: iPhone15,2, os-version: 16.0], [device: iPhone12,3, os-version: 16.0], [device: iPhone9,2, os-version: 15.0], [device: iPhone10,3, os-version: 15.0], [device: iPhone12,3, os-version: 15.0], [device: iPhone14,5, os-version: 16.0], [device: iPhone14,4, os-version: 15.0], [device: iPhone10,5, os-version: 16.0], [device: iPhone10,2, os-version: 16.0], [device: iPhone11,2, os-version: 15.0], [device: iPhone13,2, os-version: 15.0], [device: iPhone13,1, os-version: 16.0], [device: iPhone15,3, os-version: 16.0], [device: iPhone13,1, os-version: 15.0], [device: iPhone11,4, os-version: 16.0], [device: iPhone13,4, os-version: 16.0], [device: iPhone14,2, os-version: 16.0], [device: iPhone14,4, os-version: 16.0], [device: iPhone11,2, os-version: 16.0], [device: iPhone10,3, os-version: 16.0], [device: iPhone13,2, os-version: 16.0], and [device: iPhone14,7, os-version: 16.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-3D429F19-C82C-4A41-B87D-918755ABCEAC.ipa
+Supported variant descriptors: [device: iPhone8,2, os-version: 15.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-3E58E092-223C-480B-B5FB-EEAC3D46AC5B.ipa
+Supported variant descriptors: [device: iPhone8,2, os-version: 14.0] and [device: iPhone8,2, os-version: 13.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-47B32B24-691E-433F-8A12-2F9AA8D196EB.ipa
+Supported variant descriptors: [device: iPhone12,8, os-version: 14.0], [device: iPhone10,1, os-version: 14.0], [device: iPhone10,1, os-version: 13.0], [device: iPhone9,3, os-version: 13.0], [device: iPhone10,4, os-version: 13.0], [device: iPhone12,8, os-version: 13.0], [device: iPhone9,1, os-version: 13.0], [device: iPhone9,1, os-version: 14.0], [device: iPhone10,4, os-version: 14.0], and [device: iPhone9,3, os-version: 14.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-5A69EABC-5FD3-4C6B-AC99-4AF3C7B574F0.ipa
+Supported variant descriptors: [device: iPad8,1, os-version: 15.0], [device: iPad7,1, os-version: 16.0], [device: iPad13,6, os-version: 15.0], [device: iPad6,4, os-version: 16.0], [device: iPad13,1, os-version: 15.0], [device: iPad13,1, os-version: 16.0], [device: iPad8,12, os-version: 15.0], [device: iPad11,3, os-version: 16.0], [device: iPad7,3, os-version: 15.0], [device: iPad14,1, os-version: 16.0], [device: iPad13,5, os-version: 16.0], [device: iPad11,3, os-version: 15.0], [device: iPad8,4, os-version: 15.0], [device: iPad14,3-A, os-version: 16.0], [device: iPad6,3, os-version: 15.0], [device: iPad8,3, os-version: 16.0], [device: iPad8,6, os-version: 15.0], [device: iPad8,7, os-version: 15.0], [device: iPad14,1, os-version: 15.0], [device: iPad8,8, os-version: 16.0], [device: iPad14,6-B, os-version: 16.0], [device: iPad13,8, os-version: 16.0], [device: iPad11,1, os-version: 15.0], [device: MacFamily20,1, os-version: 15.0], [device: iPad13,2, os-version: 16.0], [device: iPad8,2, os-version: 15.0], [device: iPad8,2, os-version: 16.0], [device: iPad14,2, os-version: 15.0], [device: iPad7,4, os-version: 16.0], [device: iPad13,6, os-version: 16.0], [device: iPad13,7, os-version: 15.0], [device: iPad8,11, os-version: 15.0], [device: iPad8,6, os-version: 16.0], [device: iPad13,9, os-version: 16.0], [device: iPad8,9, os-version: 16.0], [device: iPad13,9, os-version: 15.0], [device: iPad13,17, os-version: 15.0], [device: iPad13,4, os-version: 16.0], [device: iPad13,11, os-version: 16.0], [device: iPad8,7, os-version: 16.0], [device: iPad7,2, os-version: 15.0], [device: iPad13,10, os-version: 15.0], [device: iPad8,8, os-version: 15.0], [device: iPad14,4-A, os-version: 16.0], [device: iPad11,4, os-version: 16.0], [device: iPad7,1, os-version: 15.0], [device: iPad8,3, os-version: 15.0], [device: iPad14,2, os-version: 16.0], [device: iPad13,7, os-version: 16.0], [device: iPad13,16, os-version: 16.0], [device: iPad14,5-B, os-version: 16.0], [device: MacFamily20,1, os-version: 16.0], [device: iPad13,16, os-version: 15.0], [device: iPad8,9, os-version: 15.0], [device: iPad14,4-B, os-version: 16.0], [device: iPad8,4, os-version: 16.0], [device: iPad13,10, os-version: 16.0], [device: iPad13,4, os-version: 15.0], [device: iPad14,6-A, os-version: 16.0], [device: iPad8,11, os-version: 16.0], [device: iPad7,2, os-version: 16.0], [device: iPad7,3, os-version: 16.0], [device: iPad8,10, os-version: 16.0], [device: iPad14,5-A, os-version: 16.0], [device: iPad11,2, os-version: 16.0], [device: iPad11,1, os-version: 16.0], [device: iPad13,5, os-version: 15.0], [device: iPad6,4, os-version: 15.0], [device: iPad11,4, os-version: 15.0], [device: iPad13,2, os-version: 15.0], [device: iPad6,3, os-version: 16.0], [device: iPad8,1, os-version: 16.0], [device: iPad13,11, os-version: 15.0], [device: iPad7,4, os-version: 15.0], [device: iPad8,5, os-version: 15.0], [device: iPad8,10, os-version: 15.0], [device: iPad13,8, os-version: 15.0], [device: iPad11,2, os-version: 15.0], [device: iPad8,5, os-version: 16.0], [device: iPad8,12, os-version: 16.0], [device: iPad13,17, os-version: 16.0], and [device: iPad14,3-B, os-version: 16.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-6495C5F4-3EBA-42A1-8DB6-93FEC53C59A9.ipa
+Supported variant descriptors: [device: iPad7,5, os-version: 16.0], [device: iPad6,7, os-version: 16.0], [device: iPad11,6, os-version: 16.0], [device: iPad7,6, os-version: 16.0], [device: iPad12,2, os-version: 15.0], [device: iPad7,12, os-version: 16.0], [device: iPad6,11, os-version: 15.0], [device: iPad12,2, os-version: 16.0], [device: iPad6,12, os-version: 16.0], [device: iPad7,5, os-version: 15.0], [device: iPad6,12, os-version: 15.0], [device: iPad6,8, os-version: 16.0], [device: iPad7,11, os-version: 16.0], [device: iPad11,6, os-version: 15.0], [device: iPad5,4, os-version: 15.0], [device: iPad12,1, os-version: 15.0], [device: iPad11,7, os-version: 16.0], [device: iPad5,2, os-version: 15.0], [device: iPad7,6, os-version: 15.0], [device: iPad5,1, os-version: 15.0], [device: iPad7,12, os-version: 15.0], [device: iPad6,11, os-version: 16.0], [device: iPad13,18, os-version: 16.0], [device: iPad6,7, os-version: 15.0], [device: iPad7,11, os-version: 15.0], [device: iPad13,19, os-version: 16.0], [device: iPad6,8, os-version: 15.0], [device: iPad11,7, os-version: 15.0], [device: iPad5,3, os-version: 15.0], and [device: iPad12,1, os-version: 16.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-8E0F6D3B-ADF8-4D18-82CF-CEB0C3CC31D2.ipa
+Supported variant descriptors: [device: iPad5,4, os-version: 13.0], [device: iPad6,8, os-version: 14.0], [device: iPad11,7, os-version: 14.0], [device: iPad5,2, os-version: 13.0], [device: iPad5,1, os-version: 13.0], [device: iPad5,3, os-version: 13.0], [device: iPad6,12, os-version: 14.0], [device: iPad6,12, os-version: 13.0], [device: iPad11,6, os-version: 14.0], [device: iPad6,11, os-version: 13.0], [device: iPad7,12, os-version: 13.0], [device: iPad6,7, os-version: 14.0], [device: iPad6,11, os-version: 14.0], [device: iPad5,2, os-version: 14.0], [device: iPad5,4, os-version: 14.0], [device: iPad7,5, os-version: 13.0], [device: iPad5,1, os-version: 14.0], [device: iPad6,7, os-version: 13.0], [device: iPad6,8, os-version: 13.0], [device: iPad5,3, os-version: 14.0], [device: iPad7,12, os-version: 14.0], [device: iPad7,11, os-version: 13.0], [device: iPad7,11, os-version: 14.0], [device: iPad7,6, os-version: 13.0], [device: iPad7,5, os-version: 14.0], and [device: iPad7,6, os-version: 14.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-902A76C9-9BFD-4480-9A8F-B99BF75421DD.ipa
+Supported variant descriptors: [device: iPhone9,2, os-version: 14.0], [device: iPhone12,5, os-version: 13.0], [device: iPhone11,4, os-version: 13.0], [device: iPhone12,3, os-version: 13.0], [device: iPhone12,3, os-version: 14.0], [device: iPhone10,3, os-version: 14.0], [device: iPhone13,2, os-version: 14.0], [device: iPhone11,6, os-version: 13.0], [device: iPhone10,3, os-version: 13.0], [device: iPhone13,3, os-version: 14.0], [device: iPhone11,2, os-version: 13.0], [device: iPhone9,4, os-version: 14.0], [device: iPhone10,5, os-version: 13.0], [device: iPhone10,6, os-version: 13.0], [device: iPhone11,4, os-version: 14.0], [device: iPhone10,2, os-version: 14.0], [device: iPhone10,6, os-version: 14.0], [device: iPhone12,5, os-version: 14.0], [device: iPhone9,4, os-version: 13.0], [device: iPhone11,2, os-version: 14.0], [device: iPhone13,4, os-version: 14.0], [device: iPhone13,1, os-version: 14.0], [device: iPhone11,6, os-version: 14.0], [device: iPhone10,5, os-version: 14.0], [device: iPhone10,2, os-version: 13.0], and [device: iPhone9,2, os-version: 13.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-C7F393BC-1698-4038-B1D8-33DD35C37F78.ipa
+Supported variant descriptors: [device: iPad8,8, os-version: 13.0], [device: iPad13,6, os-version: 14.0], [device: iPad6,4, os-version: 14.0], [device: iPad7,4, os-version: 14.0], [device: iPad8,6, os-version: 14.0], [device: iPad7,3, os-version: 13.0], [device: iPad7,3, os-version: 14.0], [device: iPad8,10, os-version: 14.0], [device: iPad8,2, os-version: 13.0], [device: iPad7,2, os-version: 14.0], [device: iPad8,12, os-version: 13.0], [device: iPad7,2, os-version: 13.0], [device: iPad11,3, os-version: 13.0], [device: iPad8,9, os-version: 13.0], [device: iPad13,2, os-version: 14.0], [device: iPad13,1, os-version: 14.0], [device: iPad11,2, os-version: 14.0], [device: iPad8,9, os-version: 14.0], [device: iPad8,11, os-version: 14.0], [device: iPad7,1, os-version: 13.0], [device: iPad11,3, os-version: 14.0], [device: iPad8,3, os-version: 14.0], [device: iPad13,9, os-version: 14.0], [device: iPad11,1, os-version: 14.0], [device: iPad11,2, os-version: 13.0], [device: iPad13,8, os-version: 14.0], [device: MacFamily20,1, os-version: 14.0], [device: iPad13,10, os-version: 14.0], [device: iPad8,3, os-version: 13.0], [device: iPad8,1, os-version: 13.0], [device: iPad8,1, os-version: 14.0], [device: iPad6,3, os-version: 14.0], [device: iPad8,10, os-version: 13.0], [device: iPad7,4, os-version: 13.0], [device: iPad8,8, os-version: 14.0], [device: iPad13,11, os-version: 14.0], [device: iPad8,12, os-version: 14.0], [device: iPad11,4, os-version: 13.0], [device: iPad8,7, os-version: 13.0], [device: iPad11,4, os-version: 14.0], [device: iPad8,4, os-version: 13.0], [device: iPad13,5, os-version: 14.0], [device: iPad7,1, os-version: 14.0], [device: iPad6,4, os-version: 13.0], [device: iPad6,3, os-version: 13.0], [device: iPad8,5, os-version: 13.0], [device: iPad13,7, os-version: 14.0], [device: iPad8,11, os-version: 13.0], [device: iPad8,6, os-version: 13.0], [device: iPad13,4, os-version: 14.0], [device: iPad11,1, os-version: 13.0], [device: iPad8,2, os-version: 14.0], [device: iPad8,5, os-version: 14.0], [device: iPad8,4, os-version: 14.0], and [device: iPad8,7, os-version: 14.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-D0FC0834-AA8D-4C14-9F0B-680D2C858A59.ipa
+Supported variant descriptors: [device: iPhone10,4, os-version: 15.0], [device: iPhone9,3, os-version: 15.0], [device: iPhone10,1, os-version: 15.0], [device: iPhone10,4, os-version: 16.0], [device: iPhone12,8, os-version: 15.0], [device: iPhone14,6, os-version: 15.0], [device: iPhone10,1, os-version: 16.0], [device: iPhone14,6, os-version: 16.0], [device: iPhone12,8, os-version: 16.0], and [device: iPhone9,1, os-version: 15.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-DA13A289-F1B1-4A1F-956F-6A472C7148A2.ipa
+Supported variant descriptors: [device: iPhone8,4, os-version: 15.0], [device: iPhone8,1, os-version: 15.0], and [device: iPod9,1, os-version: 15.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App-EAFC5686-D98A-4FC3-97DD-D52E40EDE32D.ipa
+Supported variant descriptors: [device: iPhone11,8, os-version: 14.0], [device: iPhone12,1, os-version: 13.0], [device: iPhone12,1, os-version: 14.0], and [device: iPhone11,8, os-version: 13.0]
+App + On Demand Resources size: 16.5 MB compressed, 51.8 MB uncompressed
+App size: 16.5 MB compressed, 51.8 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: App.ipa
+Supported variant descriptors: Universal
+App + On Demand Resources size: 16.7 MB compressed, 52.1 MB uncompressed
+App size: 16.7 MB compressed, 52.1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed

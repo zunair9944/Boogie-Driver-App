@@ -1,0 +1,52 @@
+.user {
+    width: 69px;
+}
+
+.customSelect {
+    --background: #ffffff;
+    --background-activated: #fff;
+    --background-hover: #fff;
+    --color: #000000;
+    --border-color: transparent;
+    --min-height: 60px;
+    --inner-padding-top: 0;
+    --highlight-height: 0px;
+    --placeholder-font-weight: 500;
+    --padding-start: 0;
+    --padding-bottom: 12px;
+    --placeholder-color: #666666;
+    --placeholder-opacity: 1;
+    --inner-border-width: 0;
+    --border-width: 0;
+    font-size: 18px;
+    &.pl30 {
+        --padding-start: 30px;
+    }
+    .inouticon {
+        margin-top: 31px;
+        margin-right: 8px;
+    }
+}
+
+.no-border {
+    --inner-border-width: 0;
+    --border-width: 0;
+    --inner-padding-end: 0;
+}
+
+.badge {
+    --background: #03A772;
+    border-radius: 19px;
+    --color: #ffffff;
+    --padding-start: 11px;
+    --padding-end: 11px;
+    --padding-top: 6px;
+    --padding-bottom: 6px;
+    max-height: 26px;
+}
+
+.buttonClear {
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+}

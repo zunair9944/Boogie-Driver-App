@@ -1,0 +1,106 @@
+.container {
+  --padding-bottom: 50px;
+}
+
+.login_center {
+  padding: 2vh 21px 2vh 21px;
+  .lock-img {
+    width: 118px;
+  }
+}
+
+.edit {
+  width: 13px;
+}
+
+ion-footer {
+  background: #ffffff;
+  border-radius: 18px 18px 0 0;
+  padding: 20px 0 50px 0;
+}
+
+.otpInput {
+  width: 45px;
+  height: 45px;
+  max-width: 45px;
+  border: 1px solid #572c576f;
+  border-radius: 2px;
+  background: #ffffff;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(13.5914px);
+  border-radius: 2px;
+}
+
+.otp {
+  &.success {
+    .otpInput {
+      background: rgba(3, 167, 114, 0.02);
+      border: 1px solid rgba(3, 167, 114, 0.3);
+      color: #2bc25f;
+    }
+  }
+  &.error {
+    .otpInput {
+      background: rgba(239, 46, 36, 0.02);
+      border: 1px solid rgba(239, 46, 36, 0.12);
+      color: #fe1917;
+    }
+  }
+}
+
+.arrowback {
+  width: 24px;
+}
+
+.phoneInput {
+  display: flex;
+  padding: 20px 19px;
+  ion-input {
+    --padding-bottom: 8px;
+    background: #ffffff;
+    border: 2px solid rgba(141, 82, 130, 0.2);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(13.5914px);
+    border-radius: 40px;
+    display: flex;
+    --placeholder-color: black;
+    --placeholder-opacity: 1;
+  }
+  .phoneOne {
+    width: 76px;
+    max-width: 76px;
+    height: 54px;
+    text-align: center;
+    --padding-start: 10px;
+    --padding-end: 10px;
+  }
+  .phoneTwo {
+    width: 100%;
+    height: 54px;
+    margin-left: 7px;
+    text-align: left;
+    --padding-start: 10px;
+    --padding-end: 10px;
+  }
+}
+.disabled {
+  color: rgb(215 216 218);
+}
+.has-error {
+  color: #fe1917 !important;
+  background: rgba(239, 46, 36, 0.02) !important;
+  border: 1px solid rgba(239, 46, 36, 0.987) !important;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05) !important;
+}
+.invalid-code {
+  color: #fe1917 !important;
+  background: rgba(239, 46, 36, 0.02) !important;
+  border: 1px solid rgb(246, 16, 4) !important;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05) !important;
+}
+.valid-code {
+  color: #2bc25f !important;
+  background: rgba(3, 167, 114, 0.02) !important;
+  border: 1px solid rgba(3, 167, 114, 0.3) !important;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05) !important;
+}

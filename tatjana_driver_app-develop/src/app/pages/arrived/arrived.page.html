@@ -1,0 +1,43 @@
+<app-header></app-header>
+<ion-img class="mt--104" src="/assets/icon/map.jpg"></ion-img>
+<p class="driverWaiting blue">Your destination is on the left!</p>
+
+<ion-modal #modal class="modalMain" trigger="open-modal" [showBackdrop]="false" [initialBreakpoint]="0.35" [breakpoints]="[0.7, 0.25]" handleBehavior="cycle" [backdropDismiss]="false" [isOpen]="true">
+
+    <ng-template>
+        <div class="modalContainerUp">
+            <div class="modalContainer px-0 ">
+                <div class="head d-flex ion-align-items-center mt-20 px-20 pb-0">
+                    <div>
+                        <ion-img class="user" src="/assets/icon/user.png"></ion-img>
+                    </div>
+                    <div class="flex-fill w-100 ml-15">
+                        <h4 class="font15 fontw600 text-black mt-0 mb-0">Harry Jho</h4>
+                    </div>
+                    <div class="ion-text-center min126 d-flex ion-justify-content-end">
+                        <ion-img class="w-44" src="/assets/icon/phone-2.svg"></ion-img>
+                        <ion-img class="w-44 email" src="/assets/icon/email-2.svg"></ion-img>
+                    </div>
+                </div>
+
+                <ion-row class="pt-0">
+                    <ion-col size="12 " class="ion-no-padding px-10">
+                        <hr class="hr mt-0 mb-0">
+                    </ion-col>
+                </ion-row>
+
+
+                <ion-row class="m-0 px-30 bg-grey-fd">
+                    <ion-col size="12" class="ion-no-padding d-flex ion-justify-content-center">
+                        <ion-button (click)="endRide()" color="light" fill="clear" class="btn-primary w-100 ion-no-margin ion-no-padding text-white fontw700 font16 ion-text-center">
+                            <span>Arrived</span>
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+
+            </div>
+
+
+        </div>
+    </ng-template>
+</ion-modal>

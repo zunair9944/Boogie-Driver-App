@@ -1,0 +1,55 @@
+<app-header [bellIcon]="bellIcon"></app-header>
+
+<capacitor-google-map id="map" class="map"></capacitor-google-map>
+
+<ion-icon
+  (click)="updateLocationMoveMapToMarker()"
+  class="center-location-icon"
+  name="location-outline"
+></ion-icon>
+
+<p *ngIf="!isDriverActive" class="driverWaiting">YOU ARE OFFLINE</p>
+
+<p *ngIf="isDriverActive && searchingForRide" class="driverWaiting green">
+  Searching for Rides...
+</p>
+<p *ngIf="rideExpired" class="driverWaiting">Ride Request Expired!</p>
+
+<!-- <div
+  *ngIf="isDriverActive && driverDeclineRequest"
+  class="driverWaiting ion-text-start"
+>
+  <p class="font16 fontw600 text-white lh20">Ride Request Expired!</p>
+  <p class="font12 fontw400 text-white">
+    We are searching for your next ride request.
+  </p>
+</div> -->
+
+<ion-footer
+  *ngIf="!isDriverActive"
+  class="ion-no-border ion-color-white position-absolute"
+>
+  <ion-grid class="ion-no-padding">
+    <ion-row class="footer">
+      <ion-col size="12" class="ion-no-padding ion-text-end">
+        <ion-button
+          (click)="handleClickLetsBoogie()"
+          color="light"
+          fill="clear"
+          class="
+            btn-primary
+            ion-no-margin
+            w-100
+            ion-no-padding
+            text-white
+            fontw700
+            font17
+            ion-text-center
+          "
+        >
+          <span>Let's Boogie!</span>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

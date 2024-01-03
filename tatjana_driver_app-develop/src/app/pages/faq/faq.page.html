@@ -1,0 +1,73 @@
+<ion-content fullscreen="true" class="container">
+    <ion-row class="login_top">
+        <ion-col size="12" class="d-flex ion-wrap ion-justify-content-start headTop">
+            <ion-button [routerLink]="['/home-ride']" fill="clear" class="ion-no-padding m-0">
+                <ion-icon src="/assets/icon/back.svg" class="arrowdown m-0" size="" slot="start"></ion-icon>
+            </ion-button>
+            <h1 class="font24 fontw700 w-100 ion-text-black ion-text-start mb-0 mt-0">FAQs</h1>
+        </ion-col>
+    </ion-row>
+    <ion-grid class="login_center position-relative">
+        <ion-row>
+            <ion-col size="12" class="px-0 w-100">
+                <ion-accordion-group class="accourdian">
+                    <ion-accordion *ngFor="let faq of faqList; let i = index;" value="{{i}}">
+                        <ion-item slot="header" class="accourdianHead ">
+                            <div class="f-dlex flex-column">
+                                <h2 class="font14 fontw600 text-black mb-5 mt-10">{{faq.type}} </h2>
+                                <p class="font12 fontw400 text-grey-666666 mb-10">{{faq.short_detail}}</p>
+                            </div>
+                        </ion-item>
+                        <div class="ion-padding" slot="content">
+                            <p class="font14 fontw400 lh18 text-grey-2f">{{faq.detail}}</p>
+                        </div>
+                    </ion-accordion>
+                    <!-- <ion-accordion value="second">
+                        <ion-item slot="header" class="accourdianHead ">
+                            <div class="f-dlex flex-column">
+                                <h2 class="font14 fontw600 text-black mb-5 mt-10">Ride Booking</h2>
+                                <p class="font12 fontw400 text-grey-666666 mb-10">Any issue regarding Ride Booking</p>
+                            </div>
+                        </ion-item>
+                        <div class="ion-padding" slot="content">
+                            <p class="font14 fontw400 lh18 text-grey-2f">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </ion-accordion>
+                    <ion-accordion value="third">
+                        <ion-item slot="header" class="accourdianHead ">
+                            <div class="f-dlex flex-column">
+                                <h2 class="font14 fontw600 text-black mb-5 mt-10">Payment</h2>
+                                <p class="font12 fontw400 text-grey-666666 mb-10">Problem while paying via wallet</p>
+                            </div>
+                        </ion-item>
+                        <div class="ion-padding" slot="content">
+                            <p class="font14 fontw400 lh18 text-grey-2f">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </ion-accordion>
+                    <ion-accordion value="four">
+                        <ion-item slot="header" class="accourdianHead ">
+                            <div class="f-dlex flex-column">
+                                <h2 class="font14 fontw600 text-black mb-5 mt-10">Map Not Loading</h2>
+                                <p class="font12 fontw400 text-grey-666666 mb-10">Map Loading issue, route issue, location picker</p>
+                            </div>
+                        </ion-item>
+                        <div class="ion-padding" slot="content">
+                            <p class="font14 fontw400 lh18 text-grey-2f">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </ion-accordion>
+                    <ion-accordion value="five">
+                        <ion-item slot="header" class="accourdianHead ">
+                            <div class="f-dlex flex-column">
+                                <h2 class="font14 fontw600 text-black mb-5 mt-10">Report Driver</h2>
+                                <p class="font12 fontw400 text-grey-666666 mb-10">Report for misbehaving of Driver, Blocking Driver</p>
+                            </div>
+                        </ion-item>
+                        <div class="ion-padding" slot="content">
+                            <p class="font14 fontw400 lh18 text-grey-2f">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </ion-accordion> -->
+                </ion-accordion-group>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

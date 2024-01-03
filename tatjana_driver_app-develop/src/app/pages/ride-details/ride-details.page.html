@@ -1,0 +1,84 @@
+<app-header></app-header>
+<ion-img class="menu" src="/assets/icon/map.jpg"></ion-img>
+
+
+<ion-modal #modal class="modalMain" trigger="open-modal" [showBackdrop]="false" [initialBreakpoint]="0.7" [breakpoints]="[0.7, 0.25]" handleBehavior="cycle" [backdropDismiss]="false" [isOpen]="true">
+
+    <ng-template>
+        <div class="modalContainerUp">
+            <div class="modalContainer px-0 ">
+                <div class="head d-flex mt-20 px-20 pb-25">
+                    <div>
+                        <ion-img class="user" src="/assets/icon/user.png"></ion-img>
+                    </div>
+                    <div class="flex-fill w-100 ml-15">
+                        <h4 class="font15 fontw600 text-black mt-0 mb-5">Harry Jho</h4>
+                        <p class="font15 fontw500 text-grey-666666 mb-10 mt-10">2.1 miles (12 min)</p>
+
+                        <p class="font20 fontw700 text-black m-0 ">$20.00</p>
+                    </div>
+                    <div class="ion-text-center min126 d-flex ion-justify-content-end">
+                        <ion-img class="w-44" src="/assets/icon/phone-2.svg"></ion-img>
+                        <ion-img class="w-44 email" src="/assets/icon/email-2.svg"></ion-img>
+                    </div>
+                </div>
+
+                <ion-row class="pt-30">
+                    <ion-col size="12" class="ion-no-padding">
+                        <ion-row class="m-0 px-20">
+                            <ion-col size="2" class="ion-no-padding d-flex ion-align-items-center">
+                                <ion-img class="w-41" src="/assets/icon/pick-up.svg"></ion-img>
+                            </ion-col>
+                            <ion-col size="10" class="ion-no-padding">
+                                <h5 class="font11 fontw700 text-black mt-0 mb-5">PICK UP
+                                    <span class="text-grey-666666 fontw400">(1.7miles away from your location)</span></h5>
+                                <p class="font14 fontw400 m-0">3419 McDonald Avenue Lake Vista Florida</p>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                    <ion-col size="12 " class="ion-no-padding px-10">
+                        <hr class="hr">
+                    </ion-col>
+
+                    <ion-col size="12" class="ion-no-padding">
+                        <ion-row class="m-0 px-20">
+                            <ion-col size="2" class="ion-no-padding d-flex ion-align-items-center">
+                                <ion-img class="w-41" src="/assets/icon/drop-off.svg"></ion-img>
+                            </ion-col>
+                            <ion-col size="10" class="ion-no-padding">
+                                <h5 class="font11 fontw700 text-black mt-0 mb-5">DROP OFF
+                                    <span class="text-grey-666666 fontw400">(1.7miles away from your location)</span></h5>
+                                <p class="font14 fontw400 m-0">3419 McDonald Avenue Lake Vista Florida</p>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                    <ion-col size="12 " class="ion-no-padding px-10">
+                        <hr class="hr">
+                    </ion-col>
+                </ion-row>
+
+
+
+
+
+                <ion-row class="m-0 px-30">
+                    <ion-col size="12" class="ion-no-padding d-flex ion-justify-content-center">
+                        <ion-button [routerLink]="['/on-way']" color="light" fill="clear" class="ml-30 btn-primary w-100 ion-no-margin ion-no-padding text-white fontw700 font16 ion-text-center">
+                            <span>I'AVE ARRIVED</span>
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+
+
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+    </ng-template>
+</ion-modal>

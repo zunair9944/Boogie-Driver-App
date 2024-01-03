@@ -1,0 +1,41 @@
+<ion-grid fixed class="ion-no-padding pd-20">
+    <ion-row>
+        <ion-col size="12" class="ion-text-center ion-no-padding">
+            <h1 class="font20 fontw700 lh23 mt-40">Please selct your card  <br /> to subscribe monthly package ?</h1>
+            <p class="font15 fontw400 lh17 text-grey-666666 opacity75">Are you sure you want to subscribe ? You will be charged on card you select below.</p>
+            <form [formGroup]="ngForm" class="login-form">
+                <ion-row>
+                    <ion-col size="12" class="px-20 w-100">
+                        <ion-item class="ion-no-padding selectItem">
+                            &nbsp;
+                            &nbsp;
+                            <ion-spinner *ngIf="showLoadingCard" style="width: 20px; height: 20px; color: black;" name="circular"></ion-spinner>
+                            <ion-select [disabled]="true" formControlName="card_number" class="customSelect pl30 w-100" interface="popover" placeholder="Select">
+                                <ion-select-option *ngFor="let cardInfo of cardArr; let i = index" [value]="cardInfo.id">{{'****-****-****-'+cardInfo.card_number}}</ion-select-option>
+                            </ion-select>
+                            <ion-icon *ngIf="!showLoadingCard" src="/assets/icon/visa.svg" class="arrowdown m-0" size="" slot="start"></ion-icon>
+                            <ion-icon src="/assets/icon/arrow-down.svg" class="arrowdown m-0" size="" slot="end"></ion-icon>
+                        </ion-item>
+                        <div class="mb-20" *ngIf="f['card_number'].invalid && (f['card_number'].dirty || f['card_number'].touched)">
+                            <p *ngIf="f['card_number'].errors && f['card_number'].errors['required']" class="text-red-light font12 fontwbold">This field is required.</p>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </form>
+        </ion-col>
+        <ion-col size="12" class="ion-text-center  ion-no-padding mt-20">
+            <ion-button [disabled]="submitAttempted" (click)="paynow()" color="light" fill="clear" class="btn-primary ion-no-margin ion-no-padding text-white fontw700 font17 ion-text-center">
+                <span>PAY NOW!
+                    &nbsp;
+                            &nbsp;
+                            <ion-spinner *ngIf="showLoadingSpin" style="width: 20px; height: 20px; color: white;" name="circular"></ion-spinner>
+                </span>
+            </ion-button>
+        </ion-col>
+        <ion-col size="12" class="ion-text-center  ion-no-padding mb-30">
+            <ion-button (click)="closeModel()" color="light" fill="clear" class="btn-link-grey text-underline text-grey-666666">
+                <span class="font15 fontw400 lh18 text-grey-666666 text-capitalize">Close</span>
+            </ion-button>
+        </ion-col>
+    </ion-row>
+</ion-grid>
